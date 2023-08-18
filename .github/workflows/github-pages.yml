@@ -28,6 +28,7 @@ jobs:
 
   deploy-heyvr:
     needs: package
+    runs-on: ubuntu-latest
     if: startsWith(github.event.ref, 'refs/tags/')
     container:
       image: node:18-alpine
