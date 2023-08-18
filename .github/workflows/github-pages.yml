@@ -42,8 +42,10 @@ jobs:
       with:
         name: mouse-defense-deploy
         path: public/
-    - run: npm ci
-    - run: npm run publish:heyvr -- ${{ github.ref_name }}
+    - name: Install script dependencies
+      run: cd scripts && npm ci
+    - name: Run publish script
+      run: cd scripts && npm run publish:heyvr -- ${{ github.ref_name }}
       env:
         HEYVR_ACCESS_TOKEN: ${{ secrets.HEYVR_ACCESS_TOKEN }}
 
