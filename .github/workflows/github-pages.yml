@@ -28,6 +28,7 @@ jobs:
 
   deploy-heyvr:
     needs: package
+    if: startsWith(github.event.ref, 'refs/tags/')
     on:
       push:
         tags:
