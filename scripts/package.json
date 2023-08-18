@@ -1,0 +1,13 @@
+{
+  "name": "scripts",
+  "version": "1.0.0",
+  "description": "Scripts for publishing Mouse Defense.",
+  "main": "publish-heyvr.js",
+  "type": "module",
+  "scripts": {
+    "publish:heyvr": "node publish-heyvr.js"
+  },
+  "dependencies": {
+    "axios": "^1.4.0"
+  }
+}
